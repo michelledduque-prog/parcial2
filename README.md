@@ -9,7 +9,7 @@
 
 
 
-# Parcial2 - Batalla de Criaturas
+# Parcial 2 - Batalla de Criaturas
 
 Este proyecto es una simulación de batallas entre criaturas utilizando programación orientada a objetos en Java. Implementa conceptos como **herencia, polimorfismo, interfaces y composición**.
 
