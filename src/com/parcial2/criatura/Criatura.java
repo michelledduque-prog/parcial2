@@ -1,44 +1,41 @@
-package com.parcial2.criatura;
+ackage com.parcial2.criatura;
 
-import com.parcial2.interfaz.Magico;
+import com.parcial2.equipamiento.Arma;
 
-public class Mago extends Criatura implements Magico {
+public abstract class Criatura {
 
-    private boolean hechizoAprendido = false;
+    private final String nombre;
+    private int salud;
+    private final int fuerza;
+    private Arma arma;
 
-    public Mago(String nombre, int salud, int fuerza) {
-        super(nombre, salud, fuerza);
+    public Criatura(String nombre, int salud, int fuerza) {
+        this.nombre = nombre;
+        this.salud = salud;
+        this.fuerza = fuerza;
     }
 
-    @Override
-    public void aprenderHechizo() {
-        hechizoAprendido = true;
-        System.out.println(getNombre() + " aprendió hechizo.");
+    public String getNombre() { return nombre; }
+    public int getFuerza() { return fuerza; }
+    public int getSalud() { return salud; }
+    public boolean estaViva() { return salud > 0; }
+
+    public void equiparArma(Arma arma) {
+        this.arma = arma;
     }
 
-    @Override
-    public void lanzarHechizo() {
-        System.out.println(getNombre() + " lanza hechizo mágico.");
+    public Arma getArma() {
+        return arma;
     }
 
-    public void lanzarHechizo(Criatura objetivo) {
-        if (!hechizoAprendido) {
-            atacar(objetivo);
-            return;
-        }
-
-        int daño = getFuerza() * 3;
-        objetivo.defender(daño);
+    public int calcularDañoBase() {
+        return fuerza + (arma != null ? arma.getDañoAdicional() : 0);
     }
 
-    @Override
-    public void atacar(Criatura objetivo) {
-        int daño = calcularDañoBase() + 3;
-        objetivo.defender(daño);
+    public void recibirDaño(int daño) {
+        this.salud -= daño;
     }
 
-    @Override
-    public void defender(int daño) {
-        recibirDaño(Math.max(daño - 2, 0));
-    }
+    public abstract void atacar(Criatura objetivo);
+    public abstract void defender(int daño);
 }
