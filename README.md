@@ -30,7 +30,7 @@ Cada criatura posee atributos básicos como vida y fuerza, y puede equipar armas
 
 ## Estructura del proyecto
 
-```plaintext
+plaintext
 src/main/java/com/parcial2/
 │
 ├── Main.java
@@ -50,9 +50,10 @@ src/main/java/com/parcial2/
 └── interfaz/
     ├── Magico.java
     └── Volador.java
----
+    
+  ---
 
-## Funcionalidades
+  ## Funcionalidades
 
 - Sistema de combate por turnos
 - Ataques físicos y mágicos
@@ -62,6 +63,7 @@ src/main/java/com/parcial2/
   - Dragón: puede volar y usar magia
   - Mago: usa hechizos
   - Guerrero: combate cuerpo a cuerpo con defensa mejorada
+
 
 ---
 
