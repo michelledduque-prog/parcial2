@@ -1,4 +1,4 @@
-ackage com.parcial2.criatura;
+package com.parcial2.criatura;
 
 import com.parcial2.equipamiento.Arma;
 
