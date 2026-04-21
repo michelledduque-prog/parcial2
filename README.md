@@ -30,26 +30,26 @@ Cada criatura posee atributos básicos como vida y fuerza, y puede equipar armas
 
 ## Estructura del proyecto
 
+```plaintext
 src/main/java/com/parcial2/
 │
 ├── Main.java
 │
 ├── batalla/
-│ └── Simulador.java
+│   └── Simulador.java
 │
 ├── criatura/
-│ ├── Criatura.java
-│ ├── Dragon.java
-│ ├── Guerrero.java
-│ └── Mago.java
+│   ├── Criatura.java
+│   ├── Dragon.java
+│   ├── Guerrero.java
+│   └── Mago.java
 │
 ├── equipamiento/
-│ └── Arma.java
+│   └── Arma.java
 │
 └── interfaz/
-├── Magico.java
-└── Volador.java
-
+    ├── Magico.java
+    └── Volador.java
 ---
 
 ## Funcionalidades
